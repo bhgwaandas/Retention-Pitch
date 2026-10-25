@@ -1,0 +1,339 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Sankalp Bangwal</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+  /* Layout: full-bleed alternating bands on a light canvas; vivid-blue hero/proof/contact bands carry the energy, cards hold the case studies. */
+  :root{
+    --bg:#F5F7FC;
+    --surface:#FFFFFF;
+    --fg:#0A0E1A;
+    --muted:#525C70;
+    --line:#E3E8F2;
+    --blue:#1E47FF;        /* vivid electric blue — primary */
+    --blue-bright:#527BFF;  /* hover / accent pop */
+    --ink:#060913;          /* near-black for dark bands */
+    --on-blue:#F3F6FF;
+    --shadow:0 18px 40px -24px rgba(16,30,90,.45);
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+    --bg:#070A14; --surface:#0E1324; --fg:#EDF1FB; --muted:#9AA6C2;
+    --line:#1E2740; --blue:#4F77FF; --blue-bright:#7A99FF; --ink:#04060E;
+    --on-blue:#F3F6FF; --shadow:0 18px 44px -24px rgba(0,0,0,.7); color-scheme:dark;
+  }}
+  :root[data-theme="dark"]{
+    --bg:#070A14; --surface:#0E1324; --fg:#EDF1FB; --muted:#9AA6C2;
+    --line:#1E2740; --blue:#4F77FF; --blue-bright:#7A99FF; --ink:#04060E;
+    --on-blue:#F3F6FF; --shadow:0 18px 44px -24px rgba(0,0,0,.7); color-scheme:dark;
+  }
+
+  *{box-sizing:border-box}
+  body{background:var(--bg);color:var(--fg);font-family:"Hanken Grotesk",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Archivo","Hanken Grotesk",system-ui,sans-serif;margin:0;line-height:1.02;text-wrap:balance;letter-spacing:-.02em}
+  p{margin:0}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+  .eyebrow{font-family:"Archivo";font-weight:700;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
+
+  /* paint the safe-area band above the sticky nav */
+  body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--ink)}
+
+  /* NAV */
+  .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--ink) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:14px}
+  .brand{font-family:"Archivo";font-weight:900;font-size:1.05rem;letter-spacing:-.01em;color:#fff}
+  .brand span{color:var(--blue-bright)}
+  .nav a.cta-sm{font-family:"Archivo";font-weight:700;font-size:.82rem;color:var(--ink);background:var(--blue-bright);padding:9px 16px;border-radius:999px;text-decoration:none;transition:transform .15s ease,background .15s ease}
+  .nav a.cta-sm:hover{background:#fff;transform:translateY(-1px)}
+
+  /* HERO */
+  .hero{position:relative;background:var(--ink);color:#fff;overflow:hidden}
+  .hero .wrap{padding-block:clamp(64px,12vw,120px);position:relative;z-index:2}
+  .hero .blob{position:absolute;z-index:1;border-radius:50%;filter:blur(70px);opacity:.75}
+  .hero .b1{width:min(60vw,520px);aspect-ratio:1;background:var(--blue);top:-16%;right:-8%;animation:float1 14s ease-in-out infinite}
+  .hero .b2{width:min(44vw,380px);aspect-ratio:1;background:#0030c9;bottom:-24%;left:-6%;animation:float2 18s ease-in-out infinite}
+  .hero h1{font-weight:900;font-size:clamp(2.5rem,8vw,5.4rem);max-width:14ch}
+  .hero h1 em{font-style:normal;color:var(--blue-bright);position:relative}
+  .hero p.sub{margin-top:24px;font-size:clamp(1.05rem,2.4vw,1.4rem);color:#C4CEEA;max-width:46ch;line-height:1.5}
+  .hero .btn-row{margin-top:36px;display:flex;flex-wrap:wrap;gap:14px}
+  .btn{font-family:"Archivo";font-weight:800;font-size:1rem;text-decoration:none;padding:15px 26px;border-radius:999px;display:inline-flex;align-items:center;gap:10px;transition:transform .15s ease,background .15s ease}
+  .btn-primary{background:var(--blue-bright);color:var(--ink)}
+  .btn-primary:hover{background:#fff;transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3)}
+  .btn-ghost:hover{border-color:#fff;transform:translateY(-2px)}
+
+  /* POSITIONING */
+  .positioning{background:var(--surface);border-bottom:1px solid var(--line)}
+  .positioning .wrap{padding-block:clamp(48px,8vw,80px);display:grid;gap:18px;max-width:900px}
+  .positioning p{font-family:"Archivo";font-weight:600;font-size:clamp(1.3rem,3.2vw,2rem);line-height:1.3;letter-spacing:-.01em}
+  .positioning p b{color:var(--blue);font-weight:800}
+
+  /* PROOF BAR */
+  .proof{background:var(--blue);color:var(--on-blue)}
+  .proof .wrap{padding-block:clamp(40px,6vw,64px);display:grid;grid-template-columns:repeat(4,1fr);gap:28px 20px}
+  .proof .stat{display:flex;flex-direction:column;gap:6px}
+  .proof .num{font-family:"Archivo";font-weight:900;font-size:clamp(2.6rem,6vw,4rem);line-height:.9;font-variant-numeric:tabular-nums}
+  .proof .lbl{font-size:.92rem;color:rgba(255,255,255,.82);font-weight:500;max-width:22ch}
+
+  /* SECTION HEADS */
+  .sec{background:var(--bg)}
+  .sec .wrap{padding-block:clamp(56px,9vw,96px)}
+  .sec-head{display:flex;flex-direction:column;gap:12px;margin-bottom:40px;max-width:40ch}
+  .sec-head h2{font-weight:800;font-size:clamp(1.9rem,4.5vw,2.9rem)}
+  .sec-head p{color:var(--muted);font-size:1.05rem}
+
+  /* CASE STUDIES */
+  .cases{display:grid;gap:22px}
+  .case{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,3.5vw,40px);box-shadow:var(--shadow);transition:transform .18s ease,border-color .18s ease}
+  .case:hover{transform:translateY(-3px);border-color:var(--blue)}
+  .case .tag{font-size:.78rem;color:var(--muted);font-weight:600;margin-bottom:14px}
+  .case h3{font-weight:800;font-size:clamp(1.35rem,3vw,1.9rem);margin-bottom:22px;max-width:24ch}
+  .case .par{min-width:0;display:grid;grid-template-columns:auto 1fr;gap:10px 18px;align-items:baseline}
+  .case .par dt{font-family:"Archivo";font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);padding-top:3px}
+  .case .par dd{margin:0;color:var(--fg)}
+  .case .par dd.result{font-family:"Archivo";font-weight:700;font-size:1.12rem;line-height:1.35}
+  .case .par dd.result b{color:var(--blue)}
+
+  /* SERVICES */
+  .svcs{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:20px}
+  .svc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:14px}
+  .svc.lead{border:1.5px solid var(--blue);background:color-mix(in srgb,var(--blue) 5%,var(--surface))}
+  .svc h3{font-weight:800;font-size:1.3rem}
+  .svc .pill{align-self:flex-start;font-family:"Archivo";font-weight:700;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);background:color-mix(in srgb,var(--blue) 12%,transparent);padding:4px 10px;border-radius:999px}
+  .svc ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+  .svc li{position:relative;padding-left:20px;color:var(--muted);font-size:.98rem}
+  .svc li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:2px;background:var(--blue)}
+
+  /* TOOLS */
+  .tools{background:var(--surface);border-block:1px solid var(--line)}
+  .tools .wrap{padding-block:30px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;justify-content:center}
+  .tools .t-lbl{font-family:"Archivo";font-weight:700;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .tools .t{font-family:"Archivo";font-weight:700;font-size:1.05rem;color:var(--fg);opacity:.72}
+
+  /* ABOUT */
+  .about .wrap{padding-block:clamp(56px,9vw,96px);display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+  .about h2{font-weight:800;font-size:clamp(1.9rem,4.5vw,2.9rem)}
+  .about .body{display:grid;gap:18px;border-left:3px solid var(--blue);padding-left:26px;max-width:60ch}
+  .about .body p{font-size:1.08rem;color:var(--fg)}
+  .about .body p.lead{font-family:"Archivo";font-weight:600}
+
+  /* CONTACT */
+  .contact{background:var(--ink);color:#fff}
+  .contact .wrap{padding-block:clamp(60px,10vw,110px);display:grid;gap:22px;max-width:760px}
+  .contact h2{font-weight:900;font-size:clamp(2.1rem,5.5vw,3.6rem);max-width:16ch}
+  .contact p{color:#C4CEEA;font-size:1.15rem;max-width:48ch}
+  .contact .rows{margin-top:10px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .mailbox{display:inline-flex;align-items:center;gap:0;border:1.5px solid rgba(255,255,255,.25);border-radius:999px;overflow:hidden}
+  .mailbox .addr{padding:13px 20px;font-weight:600;font-size:1rem;user-select:all}
+  .mailbox button{font-family:"Archivo";font-weight:700;font-size:.82rem;border:0;background:var(--blue-bright);color:var(--ink);padding:13px 18px;cursor:pointer;transition:background .15s ease}
+  .mailbox button:hover{background:#fff}
+  .contact a.li{font-family:"Archivo";font-weight:800;text-decoration:none;color:var(--ink);background:#fff;padding:14px 24px;border-radius:999px;transition:transform .15s ease,background .15s ease}
+  .contact a.li:hover{background:var(--blue-bright);transform:translateY(-2px)}
+  .foot{background:var(--ink);color:rgba(255,255,255,.5);border-top:1px solid rgba(255,255,255,.1)}
+  .foot .wrap{padding-block:22px;font-size:.85rem;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+
+  /* reveal on load from a visible resting state */
+  .rise{opacity:1;transform:none}
+  @media (prefers-reduced-motion:no-preference){
+    .rise{animation:rise .7s cubic-bezier(.2,.7,.3,1) both}
+    .d1{animation-delay:.05s}.d2{animation-delay:.12s}.d3{animation-delay:.19s}.d4{animation-delay:.26s}
+    @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+    @keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(-30px,24px)}}
+    @keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(26px,-20px)}}
+  }
+  :focus-visible{outline:3px solid var(--blue-bright);outline-offset:3px;border-radius:4px}
+
+  /* RESPONSIVE */
+  @media (max-width:860px){
+    .about .wrap{grid-template-columns:1fr;gap:22px}
+    .svcs{grid-template-columns:1fr}
+  }
+  @media (max-width:560px){
+    .proof .wrap{grid-template-columns:1fr 1fr;gap:26px 18px}
+    .case .par{grid-template-columns:1fr;gap:4px 0}
+    .case .par dt{padding-top:12px}
+  }
+</style>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand">Sankalp <span>Bangwal</span></div>
+    <a class="cta-sm" href="#contact">Get in touch</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="wrap">
+    <h1 class="rise d1">Turn the customers you <em>already have</em> into repeat revenue.</h1>
+    <p class="sub rise d2">Retention-led growth for D2C brands — plus the CRO and paid work that makes every visitor worth more.</p>
+    <div class="btn-row rise d3">
+      <a class="btn btn-primary" href="#contact">Work with me →</a>
+      <a class="btn btn-ghost" href="#work">See the work</a>
+    </div>
+  </div>
+</header>
+
+<section class="positioning">
+  <div class="wrap">
+    <p>Since 2022, I've helped D2C brands that live on their website grow revenue and optimise it through retention, paid, and CRO.</p>
+    <p>My specialty is <b>retention marketing</b> — where I've spent most of my career — helping brands scale profitably by making their existing customers worth more, not just chasing new ones.</p>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="wrap">
+    <div class="stat"><span class="num">2&times;</span><span class="lbl">contribution margin on a premium category</span></div>
+    <div class="stat"><span class="num">2&times;</span><span class="lbl">revenue per recipient from the same list</span></div>
+    <div class="stat"><span class="num">Top&nbsp;3</span><span class="lbl">category by revenue, two years running</span></div>
+    <div class="stat"><span class="num">+50%</span><span class="lbl">email revenue recovered via deliverability</span></div>
+  </div>
+</section>
+
+<section class="sec" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Selected work</span>
+      <h2>Retention work that moved real numbers.</h2>
+      <p>Anonymised to protect client data. Figures are relative and verifiable.</p>
+    </div>
+    <div class="cases">
+
+      <article class="case">
+        <div class="tag">Global D2C wellness brand &middot; RFM &amp; cohort segmentation, margin strategy</div>
+        <h3>Turned a written-off premium category into a top-3 seller</h3>
+        <dl class="par">
+          <dt>Problem</dt><dd>The brand's most premium category (priced 70–100% above its standard range) was treated as slow-moving stock and liquidated at ~50% off every season to clear inventory — destroying margin on its highest-value products.</dd>
+          <dt>Action</dt><dd>Rebuilt the category's go-to-market around RFM and cohort segmentation across US and global stores — matching the right customers to the right message instead of blanket discounting, shifting from liquidation to targeted full-price sell-through.</dd>
+          <dt>Result</dt><dd class="result"><b>Doubled contribution margin (CM1 ~25% → ~50%)</b>, held average discount to just ~10%, cleared inventory ahead of season, and made it a <b>top-3 category by revenue two years running</b>.</dd>
+        </dl>
+      </article>
+
+      <article class="case">
+        <div class="tag">Global D2C wellness brand &middot; Segmentation, lifecycle optimisation</div>
+        <h3>Made an existing email list worth twice as much</h3>
+        <dl class="par">
+          <dt>Problem</dt><dd>Email was a major revenue channel but underperforming — broad, untargeted sends meant low revenue per recipient and wasted send volume and cost.</dd>
+          <dt>Action</dt><dd>Re-architected audience segmentation using RFM, purchase, and engagement signals so every send matched customer intent, and sunset unengaged profiles to sharpen targeting and cut waste.</dd>
+          <dt>Result</dt><dd class="result"><b>More than doubled revenue per recipient ($0.07 → $0.15+)</b> — growing email revenue while lowering send costs. More money from the same list.</dd>
+        </dl>
+      </article>
+
+      <article class="case">
+        <div class="tag">Global D2C wellness brand &middot; Lifecycle strategy, email/SMS/push, 0-to-1 build</div>
+        <h3>Built a multi-channel retention engine from zero</h3>
+        <dl class="par">
+          <dt>Problem</dt><dd>The brand was launching a new product line with no retention infrastructure — no flows, no lifecycle, no repeat-purchase engine for the new range.</dd>
+          <dt>Action</dt><dd>Built the retention engine from scratch across email, SMS, and push — designing and launching lifecycle flows (welcome, education, replenishment, winback) and campaigns, then iterating through experimentation.</dd>
+          <dt>Result</dt><dd class="result">Stood up a full multi-channel retention program from zero that <b>supported a seven-figure projected ARR</b> for the new line within its first year.</dd>
+        </dl>
+      </article>
+
+      <article class="case">
+        <div class="tag">Global D2C wellness brand &middot; Email deliverability (specialist)</div>
+        <h3>Recovered email revenue hidden by poor inbox placement</h3>
+        <dl class="par">
+          <dt>Problem</dt><dd>Email revenue was capped by poor deliverability — campaigns and flows were landing in spam and promotions tabs, throttling a channel that should have been performing.</dd>
+          <dt>Action</dt><dd>Diagnosed and re-architected deliverability at the inbox-provider level — authentication, sender reputation, list hygiene, and provider-specific optimisation — to move mail back into the primary inbox.</dd>
+          <dt>Result</dt><dd class="result"><b>Doubled inbox placement and open rates (~25% → ~50%)</b> and lifted email revenue 50% — unlocking revenue already sitting in the list.</dd>
+        </dl>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">What I do</span>
+      <h2>Retention first. Then everything that feeds it.</h2>
+    </div>
+    <div class="svcs">
+      <div class="svc lead">
+        <span class="pill">Specialty</span>
+        <h3>Retention &amp; CRM</h3>
+        <ul>
+          <li>Email, SMS &amp; lifecycle flows (Klaviyo, WebEngage)</li>
+          <li>RFM / cohort segmentation &amp; LTV growth</li>
+          <li>Deliverability audits &amp; fixes</li>
+          <li>Repeat-purchase and winback programs</li>
+        </ul>
+      </div>
+      <div class="svc">
+        <h3>CRO &amp; Funnel</h3>
+        <ul>
+          <li>Landing-page and funnel optimisation</li>
+          <li>A/B testing &amp; experimentation</li>
+          <li>Research-led fixes (GA4, Hotjar, Mixpanel) from PDP to checkout</li>
+        </ul>
+      </div>
+      <div class="svc">
+        <h3>Paid &amp; Performance</h3>
+        <ul>
+          <li>Funnel and campaign optimisation to improve ROAS</li>
+          <li>Intent-aligned landing experiences</li>
+          <li>Retention-informed audience strategy</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tools">
+  <div class="wrap">
+    <span class="t-lbl">Tools I work in</span>
+    <span class="t">Klaviyo</span><span class="t">WebEngage</span><span class="t">GA4</span><span class="t">Mixpanel</span><span class="t">Hotjar</span><span class="t">Adobe Target</span>
+  </div>
+</section>
+
+<section class="sec about" id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <div class="body">
+      <p class="lead">I've spent most of my career since 2022 inside D2C retention — the unglamorous, compounding work of turning first-time buyers into repeat revenue.</p>
+      <p>I've run lifecycle programs on Klaviyo and WebEngage for global brands, doubled contribution margin on a premium category, and fixed the deliverability problems that quietly cap email revenue.</p>
+      <p>I work best with brands that already have traffic and customers but know they're leaving repeat revenue on the table. My approach is simple: find where the money is leaking, fix it, and build the system that keeps it compounding — profitably.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--blue-bright)">Work with me</span>
+    <h2>Tell me what you're trying to fix.</h2>
+    <p>Whether it's a one-time audit or ongoing retention management, send me your brand and the problem you're solving — I'll tell you honestly where I can help most.</p>
+    <div class="rows">
+      <span class="mailbox"><span class="addr" id="addr">sankalp23583@gmail.com</span><button id="copy" type="button">Copy</button></span>
+      <a class="li" href="https://www.linkedin.com/in/sankalp-bangwal" target="_blank" rel="noopener">LinkedIn →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>© 2026 Sankalp Bangwal</span>
+    <span>Retention-led growth for D2C</span>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn=document.getElementById('copy');
+    if(!btn)return;
+    btn.addEventListener('click',function(){
+      var txt=document.getElementById('addr').textContent.trim();
+      var done=function(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o;},1600);};
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(done).catch(select);
+      }else{select();}
+      function select(){
+        try{var r=document.createRange();r.selectNodeContents(document.getElementById('addr'));
+        var s=window.getSelection();s.removeAllRanges();s.addRange(r);done();}catch(e){}
+      }
+    });
+  })();
+</script>
+
+</body></html>
